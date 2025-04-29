@@ -38,7 +38,7 @@ const Hero = () => {
             Experience diplomacy across timelines — from ancient civilizations to speculative futures. 
             A debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
-          
+          <br></br>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" // ← replace this with your real link
