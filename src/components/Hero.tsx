@@ -23,7 +23,6 @@ const Hero = () => {
         
 
         
-        <div className="absolute w-64 h-64 bg-diplomacy-gold/5 rounded-full blur-xl top-1/2 left-1/3"></div>
         
         {/* World Map Pattern - Subtle background */}
         <div className="absolute inset-0 opacity-1 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCI+PHBhdGggZD0iTTAgMEwxMjAwIDBoLTEwMDELMTAwIDgwMEgwVjB6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]"></div>
