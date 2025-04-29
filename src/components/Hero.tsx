@@ -15,11 +15,6 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/mun conference.jpg')" }}
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/1"></div>
-      </div>
      
 
 
