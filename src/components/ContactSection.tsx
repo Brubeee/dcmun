@@ -50,7 +50,7 @@ const ContactSection = () => {
               </div>
 
               <div className="pt-6">
-                <a href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full border-diplomacy-gold text-diplomacy-gold hover:bg-diplomacy-gold/10">
                     Register Now
                   </Button>
