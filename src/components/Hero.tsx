@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
                   {/* Logo */}
           <img 
-            src="/logo.png" 
+            src="/logo (2).png" 
             alt="Diplomatic Confrontation Logo" 
             className="mx-auto mb-6 w-24 h-24 md:w-32 md:h-32 object-contain"
           />
