@@ -55,9 +55,11 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white">
-            Register Now
-          </Button>
+          <a href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white">
+              Register Now
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -101,9 +103,11 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white w-full">
-              Register Now
-            </Button>
+            <a href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white w-full">
+                Register Now
+              </Button>
+            </a>
           </div>
         </div>
       )}
