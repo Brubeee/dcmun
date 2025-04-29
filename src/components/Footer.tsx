@@ -13,9 +13,11 @@ const Footer = () => {
             <p className="text-gray-300 mb-4 max-w-md">
               A revolutionary MUN-style debate competition spanning multiple eras and testing the limits of diplomatic skill.
             </p>
-            <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white">
-              Register for the Next Conference
-            </Button>
+            <a href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white">
+                Register for the Next Conference
+              </Button>
+            </a>
           </div>
           
           <div>
