@@ -14,7 +14,7 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/c68b4a1d-7a0b-4368-ad52-528c6769f610.png')" }}
+      style={{ backgroundImage: "url('/mun conference.jpg')" }}
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
