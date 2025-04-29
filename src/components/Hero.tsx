@@ -1,25 +1,38 @@
-
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
   const scrollToFeatures = () => {
     const featuresSection = document.getElementById("features");
     if (featuresSection) {
       featuresSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
+  useEffect(() => {
+    // Preload image to ensure it's loaded properly
+    const img = new Image();
+    img.src = '/mun conference.jpg';
+    img.onload = () => setImageLoaded(true);
+  }, []);
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/mun conference.jpg')" }}
+      className="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      {/* Background Elements */}
+      {/* Background Image with improved handling */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <img 
+          src="/mun conference.jpg" 
+          alt="MUN Conference" 
+          className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+        />
+        {/* Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
@@ -30,9 +43,8 @@ const Hero = () => {
               Timeless Diplomacy, Modern Pressure
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience diplomacy across timelines — from ancient civilizations to speculative futures. 
+            Experience diplomacy across timelines — from ancient civilizations to speculative futures.
             A debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
           <div className="mt-16 flex justify-center">
@@ -43,21 +55,19 @@ const Hero = () => {
               <ChevronDown className="text-white w-8 h-8" />
             </div>
           </div>
-
-          <br></br>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-             <a
-                href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit"
-                target="_blank"
-                rel="noopener noreferrer"
-             >
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="bg-gray-800 hover:bg-gray-700 text-white text-lg px-8 py-6">
                 Register Now
               </Button>
             </a>
-            <Button 
-              variant="outline" 
-              className="border-gray-400 text-white hover:bg-white/10 text-lg px-8 py-6"
+            <Button
+              variant="outline"
+              className="border-diplomacy-gold text-diplomacy-gold hover:bg-diplomacy-gold/10 text-lg px-8 py-6"
               onClick={scrollToFeatures}
             >
               Learn More
