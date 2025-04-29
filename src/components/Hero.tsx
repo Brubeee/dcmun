@@ -14,25 +14,19 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/mun conference.jpg')" }} // change filename as needed
+      style={{ backgroundImage: "url('/lovable-uploads/c68b4a1d-7a0b-4368-ad52-528c6769f610.png')" }}
     >
-
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Background dark overlay */}
-        
-
-        
-        
-        {/* World Map Pattern - Subtle background */}
-        <div className="absolute inset-0 opacity-1 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCI+PHBhdGggZD0iTTAgMEwxMjAwIDBoLTEwMDELMTAwIDgwMEgwVjB6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]"></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
         <div className="animate-fade-in">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block font-display">Diplomatic Confrontation</span>
-            <span className="text-xl md:text-2xl lg:text-3xl mt-4 block font-light text-diplomacy-lightPurple">
+            <span className="block font-display text-white">Diplomatic Confrontation</span>
+            <span className="text-xl md:text-2xl lg:text-3xl mt-4 block font-light text-gray-200">
               Timeless Diplomacy, Modern Pressure
             </span>
           </h1>
@@ -46,18 +40,18 @@ const Hero = () => {
               className="animate-bounce cursor-pointer"
               onClick={scrollToFeatures}
             >
-            <ChevronDown className="text-diplomacy-lightPurple w-8 h-8" />
+              <ChevronDown className="text-white w-8 h-8" />
             </div>
           </div>
 
           <br></br>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" // ← replace this with your real link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link"
                 target="_blank"
                 rel="noopener noreferrer"
              >
-              <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white text-lg px-8 py-6">
+              <Button className="bg-gray-800 hover:bg-gray-700 text-white text-lg px-8 py-6">
                 Register Now
               </Button>
             </a>
@@ -70,8 +64,6 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        
-       
       </div>
     </section>
   );
