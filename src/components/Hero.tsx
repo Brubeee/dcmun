@@ -20,8 +20,16 @@ const Hero = () => {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
+     
+
 
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
+                  {/* Logo */}
+          <img 
+            src="/logo.png" 
+            alt="Diplomatic Confrontation Logo" 
+            className="mx-auto mb-6 w-24 h-24 md:w-32 md:h-32 object-contain"
+          />
         <div className="animate-fade-in">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block font-display text-white">Diplomatic Confrontation</span>
