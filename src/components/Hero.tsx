@@ -40,9 +40,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white text-lg px-8 py-6">
-              Register Now
-            </Button>
+             <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" // ← replace this with your real link
+                target="_blank"
+                rel="noopener noreferrer"
+             >
+              <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white text-lg px-8 py-6">
+                Register Now
+              </Button>
+            </a>
             <Button 
               variant="outline" 
               className="border-diplomacy-gold text-diplomacy-gold hover:bg-diplomacy-gold/10 text-lg px-8 py-6"
