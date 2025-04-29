@@ -22,9 +22,8 @@ const Hero = () => {
         {/* Background dark overlay */}
         <div className="absolute inset-0 bg-black/10 backdrop-blur-sm z-0"></div>
 
-        <div className="absolute w-96 h-96 bg-diplomacy-purple/20 rounded-full blur-3xl -top-20 -left-20"></div>
-        <div className="absolute w-96 h-96 bg-diplomacy-lightPurple/10 rounded-full blur-3xl bottom-10 right-10"></div>
-        <div className="absolute w-64 h-64 bg-diplomacy-gold/10 rounded-full blur-3xl top-1/2 left-1/3"></div>
+        
+        <div className="absolute w-64 h-64 bg-diplomacy-gold/5 rounded-full blur-xl top-1/2 left-1/3"></div>
         
         {/* World Map Pattern - Subtle background */}
         <div className="absolute inset-0 opacity-3 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCI+PHBhdGggZD0iTTAgMEwxMjAwIDBoLTEwMDELMTAwIDgwMEgwVjB6IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]"></div>
