@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Background dark overlay */}
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
+        <div className="absolute inset-0 bg-black/10 backdrop-blur-sm z-0"></div>
 
         <div className="absolute w-96 h-96 bg-diplomacy-purple/20 rounded-full blur-3xl -top-20 -left-20"></div>
         <div className="absolute w-96 h-96 bg-diplomacy-lightPurple/10 rounded-full blur-3xl bottom-10 right-10"></div>
