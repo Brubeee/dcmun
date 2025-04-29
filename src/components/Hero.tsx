@@ -47,7 +47,7 @@ const Hero = () => {
           <br></br>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link"
+                href="https://docs.google.com/forms/d/19dwb4pjXc016A8wu2KFolLKIS1iX8PLwFYJMZDz62-c/edit"
                 target="_blank"
                 rel="noopener noreferrer"
              >
@@ -57,7 +57,7 @@ const Hero = () => {
             </a>
             <Button 
               variant="outline" 
-              className="border-diplomacy-gold text-diplomacy-gold hover:bg-diplomacy-gold/10 text-lg px-8 py-6"
+              className="border-gray-400 text-white hover:bg-white/10 text-lg px-8 py-6"
               onClick={scrollToFeatures}
             >
               Learn More
