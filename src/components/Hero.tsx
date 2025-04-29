@@ -11,10 +11,12 @@ const Hero = () => {
   };
 
   return (
-    <section 
+    <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-diplomacy-navy"
+      className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/mun conference.jpg')" }} // change filename as needed
     >
+
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 bg-diplomacy-purple/20 rounded-full blur-3xl -top-20 -left-20"></div>
