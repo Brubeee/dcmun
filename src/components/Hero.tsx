@@ -38,6 +38,9 @@ const Hero = () => {
             Experience diplomacy across timelines — from ancient civilizations to speculative futures. 
             A debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
+           <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToFeatures}>
+            <ChevronDown className="text-diplomacy-lightPurple w-8 h-8" />
+           </div>
           <br></br>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <a
@@ -59,9 +62,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToFeatures}>
-          <ChevronDown className="text-diplomacy-lightPurple w-8 h-8" />
-        </div>
+       
       </div>
     </section>
   );
