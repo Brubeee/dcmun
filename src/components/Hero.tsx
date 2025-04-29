@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/5"></div>
       </div>
      
 
