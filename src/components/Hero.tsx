@@ -38,7 +38,7 @@ const Hero = () => {
             Experience diplomacy across timelines — from ancient civilizations to speculative futures. 
             A debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
-          <br>
+          <br></br>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
              <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" // ← replace this with your real link
@@ -58,7 +58,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        </br>
+        
         <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToFeatures}>
           <ChevronDown className="text-diplomacy-lightPurple w-8 h-8" />
         </div>
