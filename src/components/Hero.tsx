@@ -18,7 +18,7 @@ const Hero = () => {
      
 
 
-      <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
+      <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12"></div>
                   {/* Logo */}
           <img 
             src="/logo (3).png" 
