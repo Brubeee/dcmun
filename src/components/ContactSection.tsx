@@ -52,7 +52,7 @@ const ContactSection = () => {
               <div className="pt-6">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full border-diplomacy-gold text-diplomacy-gold hover:bg-diplomacy-gold/10">
-                    Register Now
+                    OC Application
                   </Button>
                 </a>
               </div>
