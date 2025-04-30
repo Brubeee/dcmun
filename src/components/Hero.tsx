@@ -54,7 +54,7 @@ const Hero = () => {
           {/* Large welcome text with better mobile scaling */}
            <h1 style={{
               color: "white",
-              padding: "40px",
+              padding: "70px",
               textAlign: "center"
             }}>
 
