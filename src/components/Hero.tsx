@@ -11,9 +11,6 @@ const Hero = () => {
 
   return (
     <section>
-     
-
-
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12"></div>
                   {/* Logo */}
           <img 
