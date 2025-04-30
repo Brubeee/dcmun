@@ -15,7 +15,7 @@ const Hero = () => {
   useEffect(() => {
     // Preload image to ensure it's loaded properly
     const img = new Image();
-    img.src = '/subtle-diplomacy-bg.jpg';
+    img.src = '/mun conference.jpg';
     img.onload = () => setImageLoaded(true);
   }, []);
 
