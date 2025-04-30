@@ -52,15 +52,32 @@ const Hero = () => {
           />
 
           {/* Large welcome text with better mobile scaling */}
-           <h1   style={{
-              color: "white",
-              padding: "40px",
-              textAlign: "center",
-              backgroundImage: "url('/mun conference.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center"
-            }}
-          >
+           <h1
+              style={{
+                color: "white",
+                padding: "40px",
+                textAlign: "center",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              {/* Blurred Background Image */}
+              <div
+                style={{
+                  backgroundImage: "url('/mun conference1.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "blur(8px)",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  zIndex: -1,
+                  opacity: 0.4,
+                }}
+              ></div>
+
 
 
 
