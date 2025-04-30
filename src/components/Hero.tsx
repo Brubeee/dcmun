@@ -34,11 +34,7 @@ const Hero = () => {
       {/* Background with conference image */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img 
-            src="/mun conference.jpg" 
-            alt="MUN Conference" 
-            className={`w-full h-full object-cover object-center transition-opacity duration-1000 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-          />
+          
         </div>
         {/* Overlay for text readability - slightly darker for mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/30"></div>
