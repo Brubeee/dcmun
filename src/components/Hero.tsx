@@ -60,6 +60,10 @@ const Hero = () => {
                 textAlign: "center",
                 position: "relative",
                 overflow: "hidden",
+                padding: "100px 20px", // Increased padding for height
+                fontSize: "2.5rem", // Optional: increase font size
+                fontWeight: "bold", // Optional: bold text
+                borderRadius: "12px" // Optional: smooth edges
               }}
             >
               {/* Blurred Background Image */}
