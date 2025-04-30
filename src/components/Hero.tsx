@@ -52,11 +52,7 @@ const Hero = () => {
           />
 
           {/* Large welcome text with better mobile scaling */}
-          <h1 style="
-            background-image: url('mun conference.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
+          <h1 style="color: white;
             padding: 40px;
             text-align: center;
           ">
