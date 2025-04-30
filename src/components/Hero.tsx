@@ -38,7 +38,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
         <div className="animate-fade-in">
           <img
-              src="/logo3.png"
+              src="/logo (3).png"
               alt="DCMUN Logo"
               className="mx-auto h-20 w-auto mb-6"
           />
