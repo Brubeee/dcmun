@@ -30,21 +30,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 mt-0"
     >
-      <div
-                style={{
-                  backgroundImage: "url('/mun conference.jpg')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  filter: "blur(8px)",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  zIndex: -1,
-                  opacity: 0.4,
-                }}
-              >
+      
       {/* Background with conference image */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-black">
@@ -77,7 +63,21 @@ const Hero = () => {
               }}
             >
               {/* Blurred Background Image */}
-      </div>   
+      <div
+                style={{
+                  backgroundImage: "url('/mun conference.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  filter: "blur(8px)",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  zIndex: -1,
+                  opacity: 0.4,
+                }}
+              ></div>   
 
 
 
