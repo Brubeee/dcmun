@@ -25,17 +25,17 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      {/* Background with conference image - improved positioning */}
+      {/* Background with conference image - more visible */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-black">
+        <div className="absolute inset-0">
           <img 
             src="/mun conference.jpg" 
             alt="MUN Conference" 
-            className={`w-full h-full object-cover object-center transition-opacity duration-500 ${imageLoaded ? 'opacity-60' : 'opacity-0'}`}
+            className={`w-full h-full object-cover object-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+        {/* Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/40"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
