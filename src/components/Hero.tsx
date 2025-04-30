@@ -52,10 +52,13 @@ const Hero = () => {
           />
 
           {/* Large welcome text with better mobile scaling */}
-          <h1 style="color: white;
-            padding: 40px;
-            text-align: center;
-          ">
+           <h1 style={{
+              color: "white",
+              padding: "40px",
+              textAlign: "center"
+            }}>
+
+
 
             <span className="block font-display text-white mb-1 sm:mb-2 text-shadow-md">Welcome to</span>
             <span className="block font-display text-white text-shadow-md">DCMUN!</span>
