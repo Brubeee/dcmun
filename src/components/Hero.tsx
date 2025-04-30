@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center bg-no-repeat"
+      className="relative min-h-screen flex items-center justify-center py-20 px-4 bg-cover bg-center"
       style={{ backgroundImage: "url('/mun conference.jpg')" }}
     >
      
