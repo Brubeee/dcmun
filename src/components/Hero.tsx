@@ -25,17 +25,17 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      {/* Background with conference image - more visible */}
+      {/* Background with conference image */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-black">
           <img 
             src="/mun conference.jpg" 
             alt="MUN Conference" 
             className={`w-full h-full object-cover object-center transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
           />
         </div>
-        {/* Lighter overlay for better image visibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/40"></div>
+        {/* Very subtle overlay for text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
@@ -43,28 +43,21 @@ const Hero = () => {
           <img
               src="/logo (3).png"
               alt="DCMUN Logo"
-              className="mx-auto h-20 w-auto mb-6"
+              className="mx-auto h-20 w-auto mb-8"
           />
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block font-display text-white">Diplomatic <span className="text-amber-500">Confrontation</span></span>
-            <span className="text-xl md:text-2xl lg:text-3xl mt-4 block font-light text-gray-200">
-              Timeless Diplomacy, Modern Pressure
-            </span>
+          {/* Large welcome text similar to the reference image */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-none tracking-wide">
+            <span className="block font-display text-white mb-2">Welcome to</span>
+            <span className="block font-display text-white">DCMUN!</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto my-12">
             Experience diplomacy across timelines — from ancient civilizations to speculative futures.
             An Online debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
-          <div className="mt-16 flex justify-center">
-            <div
-              className="animate-bounce cursor-pointer"
-              onClick={scrollToFeatures}
-            >
-              <ChevronDown className="text-white w-8 h-8" />
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+          
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-12">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link"
               target="_blank"
@@ -81,6 +74,15 @@ const Hero = () => {
             >
               Learn More
             </Button>
+          </div>
+          
+          <div className="mt-16 flex justify-center">
+            <div
+              className="animate-bounce cursor-pointer"
+              onClick={scrollToFeatures}
+            >
+              <ChevronDown className="text-white w-8 h-8" />
+            </div>
           </div>
         </div>
       </div>
