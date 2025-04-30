@@ -52,7 +52,15 @@ const Hero = () => {
           />
 
           {/* Large welcome text with better mobile scaling */}
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-wide">
+          <h1 style="
+            background-image: url('mun conference.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px;
+            text-align: center;
+          ">
+
             <span className="block font-display text-white mb-1 sm:mb-2 text-shadow-md">Welcome to</span>
             <span className="block font-display text-white text-shadow-md">DCMUN!</span>
           </h1>
