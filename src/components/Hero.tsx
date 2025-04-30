@@ -54,7 +54,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Experience diplomacy across timelines — from ancient civilizations to speculative futures.
-            A debate competition challenging your adaptability, strategy, and negotiation skills.
+            An Online debate competition challenging your adaptability, strategy, and negotiation skills.
           </p>
           <div className="mt-16 flex justify-center">
             <div
@@ -71,7 +71,7 @@ const Hero = () => {
               rel="noopener noreferrer"
             >
               <Button className="bg-amber-600 hover:bg-amber-500 text-white text-lg px-8 py-6">
-                Register Now
+                OC Applications- Apply Now
               </Button>
             </a>
             <Button
