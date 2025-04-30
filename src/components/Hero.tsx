@@ -1,4 +1,41 @@
-import { Button } from "@/components/ui/button";
+const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById("features");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+  useEffect(() => {
+    // Preload image to ensure it's loaded properly
+    const img = new Image();
+    img.src = '/subtle-texture.jpg';
+    img.onload = () => setImageLoaded(true);
+  }, []);
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col items-center justify-center py-20 px-4"
+    >
+      {/* Background with purple tint matching the design */}
+      <div className="absolute inset-0 overflow-hidden bg-[#171727]">
+        {/* Optional subtle image with very low opacity */}
+        <img 
+          src="/subtle-texture.jpg" 
+          alt="" 
+          className={`w-full h-full object-cover opacity-10 mix-blend-overlay transition-opacity duration-500 ${imageLoaded ? 'opacity-10' : 'opacity-0'}`}
+        />
+      </div>
+      
+      {/* Navigation bar */}
+      <div className="absolute top-0 left-0 right-0 px-4 py-6 z-20">
+        <div className="container mx-auto flex items-center justify-between">
+          {/* Logo and site title */}
+          <div className="flex items-center space-x-3">
+            <img src="/logo (3).png" alt="Diplomatic Confrontation Logo"import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -15,7 +52,7 @@ const Hero = () => {
   useEffect(() => {
     // Preload image to ensure it's loaded properly
     const img = new Image();
-    img.src = '/subtle-diplomacy-bg.jpg';
+    img.src = '/mun conference.jpg';
     img.onload = () => setImageLoaded(true);
   }, []);
 
@@ -24,18 +61,26 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      {/* Background with dark gradient and subtle image */}
-      <div className="absolute inset-0 overflow-hidden bg-[#121620]">
+      {/* Background with purple tint matching the design */}
+      <div className="absolute inset-0 overflow-hidden bg-[#171727]">
+        {/* Optional subtle image with very low opacity */}
         <img 
-          src="/subtle-diplomacy-bg.jpg" 
-          alt="Diplomatic Background" 
-          className={`w-full h-full object-cover opacity-20 mix-blend-overlay transition-opacity duration-500 ${imageLoaded ? 'opacity-20' : 'opacity-0'}`}
+          src="/subtle-texture.jpg" 
+          alt="" 
+          className={`w-full h-full object-cover opacity-10 mix-blend-overlay transition-opacity duration-500 ${imageLoaded ? 'opacity-10' : 'opacity-0'}`}
         />
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#121620]/90 to-[#121620]/70"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
+        {/* Logo centered at the top of content */}
+        <div className="mb-8">
+          <img 
+            src="/logo (3).png" 
+            alt="Diplomatic Confrontation Logo" 
+            className="h-20 md:h-24 mx-auto"
+          />
+        </div>
+        
         <div className="animate-fade-in">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block font-display text-white">Diplomatic <span className="text-amber-500">Confrontation</span></span>
