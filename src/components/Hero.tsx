@@ -64,7 +64,7 @@ const Hero = () => {
               {/* Blurred Background Image */}
               <div
                 style={{
-                  backgroundImage: "url('/mun conference1.jpg')",
+                  backgroundImage: "url('/mun conference.jpg')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   filter: "blur(8px)",
