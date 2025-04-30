@@ -30,7 +30,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 mt-0"
     >
-         <div
+      <div
                 style={{
                   backgroundImage: "url('/mun conference.jpg')",
                   backgroundSize: "cover",
@@ -110,7 +110,7 @@ const Hero = () => {
               Learn More
             </Button>
           </div>
-            </div>
+      </div>
           
           <div className="mt-12 sm:mt-16 flex justify-center">
             <div
