@@ -37,6 +37,12 @@ const Hero = () => {
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
         <div className="animate-fade-in">
+          <img
+              src="/logo3.png"
+              alt="DCMUN Logo"
+              className="mx-auto h-20 w-auto mb-6"
+          />
+
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block font-display text-white">Diplomatic <span className="text-amber-500">Confrontation</span></span>
             <span className="text-xl md:text-2xl lg:text-3xl mt-4 block font-light text-gray-200">
