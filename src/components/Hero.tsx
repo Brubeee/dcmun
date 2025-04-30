@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -24,15 +25,15 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4"
     >
-      {/* Background with dark gradient and subtle image */}
-      <div className="absolute inset-0 overflow-hidden bg-[#121620]">
+      {/* Background with conference image */}
+      <div className="absolute inset-0 overflow-hidden">
         <img 
-          src="/subtle-diplomacy-bg.jpg" 
-          alt="Diplomatic Background" 
-          className={`w-full h-full object-cover opacity-20 mix-blend-overlay transition-opacity duration-500 ${imageLoaded ? 'opacity-20' : 'opacity-0'}`}
+          src="/mun conference.jpg" 
+          alt="MUN Conference" 
+          className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#121620]/90 to-[#121620]/70"></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-8 md:space-y-12">
@@ -67,13 +68,13 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-indigo-700 hover:bg-indigo-600 text-white text-lg px-8 py-6">
+              <Button className="bg-amber-600 hover:bg-amber-500 text-white text-lg px-8 py-6">
                 Register Now
               </Button>
             </a>
             <Button
               variant="outline"
-              className="border-amber-500 text-amber-500 hover:bg-amber-500/10 text-lg px-8 py-6"
+              className="border-gray-300 text-gray-300 hover:bg-gray-300/10 text-lg px-8 py-6"
               onClick={scrollToFeatures}
             >
               Learn More
