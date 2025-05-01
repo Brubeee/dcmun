@@ -37,7 +37,7 @@ const Hero = () => {
           
         </div>
         {/* Overlay for text readability - slightly darker for mobile */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/30"></div>
+        
       </div>
       
       <div className="container relative z-10 mx-auto text-center space-y-6 md:space-y-12 px-4">
