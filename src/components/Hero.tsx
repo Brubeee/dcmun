@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center py-20 px-4 mt-0"
+      className="py-20 bg-gradient-to-b from-diplomacy-navy to-diplomacy-navy/95"
     >
       {/* Background with conference image */}
       <div className="absolute inset-0 overflow-hidden">
