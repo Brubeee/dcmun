@@ -42,7 +42,7 @@ const Hero = () => {
           <img
               src="/logo (5).png"
               alt="DCMUN Logo"
-              className="mx-auto h-64 sm:h-80 w-auto mb-8 sm:mb-16"
+              className="mx-auto h-64 sm:h-80 w-auto mb-4 sm:mb-8"
           />
 
           {/* Large welcome text with better mobile scaling */}
