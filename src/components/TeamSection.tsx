@@ -19,8 +19,8 @@ const TeamMember = ({ name, position }: TeamMemberProps) => {
 
 const TeamSection = () => {
   const teamMembers = [
-    { name: "Ved Shah", position: "Director General" },
     { name: "Manan Bhambhani", position: "Secretary General" },
+    { name: "Ved Shah", position: "Director General" },
     { name: "Devansh Mishra", position: "Head of Social Media" },
     { name: "Utkarsh Singh", position: "Head of Social Media" },
     { name: "Krittika Acharya", position: "Head of Marketing" },
@@ -45,8 +45,8 @@ const TeamSection = () => {
             <div 
               key={index} 
               className={`${
-                index === teamMembers.length - 1 && teamMembers.length % 3 === 1 
-                  ? "sm:col-span-2 md:col-span-1 md:mx-auto" 
+                index === teamMembers.length - 1 
+                  ? "sm:col-span-2 md:col-span-3 md:max-w-xs md:mx-auto" 
                   : ""
               } transition-all duration-500 opacity-0 translate-y-4`}
               style={{ 
