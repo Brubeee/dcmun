@@ -37,9 +37,9 @@ const TeamSection = () => {
   // Department data including dummy OC members
   const departments = {
     "Secretary General": ["Member 1", "Member 2", "Member 3"],
-    "Director General": ["Member 1", "Member 2", "Member 3"],
-    "Head of Social Media": ["Member 1", "Member 2", "Member 3"],
-    "Head of Marketing": ["Member 1", "Member 2", "Member 3"],
+    "Director General": ["", "Member 2", "Member 3"],
+    "Head of Social Media": ["Jaspal", "Member 2", "Member 3"],
+    "Head of Marketing": ["Jaspal", "Member 2", "Member 3"],
     "Head of Agenda & Crisis Development": ["Member 1", "Member 2", "Member 3"],
     "Head of Delegate Affairs": ["Member 1", "Member 2", "Member 3"],
   };
