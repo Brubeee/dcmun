@@ -13,14 +13,15 @@ import {
 interface TeamMemberProps {
   name: string;
   position: string;
-  onClick: () => void;
+  onClick?: () => void;
+  isClickable: boolean;
 }
 
-const TeamMember = ({ name, position, onClick }: TeamMemberProps) => {
+const TeamMember = ({ name, position, onClick, isClickable }: TeamMemberProps) => {
   return (
     <Card 
-      className="bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 cursor-pointer"
-      onClick={onClick}
+      className={`bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 ${isClickable ? 'cursor-pointer' : ''}`}
+      onClick={isClickable ? onClick : undefined}
     >
       <CardContent className="p-4">
         <h3 className="text-lg font-medium text-white mb-1">{name}</h3>
@@ -54,7 +55,14 @@ const TeamSection = () => {
   ];
 
   const handleMemberClick = (position: string) => {
-    setSelectedDepartment(selectedDepartment === position ? null : position);
+    // Only handle clicks for head positions, not SG or DG
+    if (position.startsWith("Head of")) {
+      setSelectedDepartment(selectedDepartment === position ? null : position);
+    }
+  };
+
+  const isClickablePosition = (position: string) => {
+    return position.startsWith("Head of");
   };
 
   return (
@@ -79,6 +87,8 @@ const TeamSection = () => {
             // Center the last item (Delegate Affairs)
             const isLastItem = member.name === "Jaskaran Singh Layal";
             
+            const isClickable = isClickablePosition(member.position);
+            
             return (
               <div 
                 key={index} 
@@ -98,6 +108,7 @@ const TeamSection = () => {
                   name={member.name} 
                   position={member.position} 
                   onClick={() => handleMemberClick(member.position)}
+                  isClickable={isClickable}
                 />
               </div>
             );
