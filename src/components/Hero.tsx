@@ -37,6 +37,7 @@ const Hero = () => {
           
         </div>
         {/* Overlay for text readability - slightly darker for mobile */}
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/30" bis_skin_checked="1"></div>
         
       </div>
       
