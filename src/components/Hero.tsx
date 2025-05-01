@@ -30,10 +30,12 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center py-20 px-4 mt-0"
     >
+      
       {/* Background with conference image */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Removed the black background div that was causing the rectangle */}
-        
+        <div className="absolute inset-0 bg-black">
+          
+        </div>
         {/* Overlay for text readability - slightly darker for mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/30"></div>
       </div>
@@ -50,17 +52,18 @@ const Hero = () => {
            <h1
               style={{
                 color: "white",
+                padding: "40px",
                 textAlign: "center",
                 position: "relative",
                 overflow: "hidden",
-                padding: "100px 20px", // Fixed duplicate padding property
+                padding: "100px 20px", // Increased padding for height
                 fontSize: "2.5rem", // Optional: increase font size
                 fontWeight: "bold", // Optional: bold text
                 borderRadius: "12px" // Optional: smooth edges
               }}
             >
               {/* Blurred Background Image */}
-              <div
+      <div
                 style={{
                   backgroundImage: "url('/mun conference.jpg')",
                   backgroundSize: "cover",
@@ -76,8 +79,11 @@ const Hero = () => {
                 }}
               ></div>   
 
-              <span className="block font-display text-white mb-1 sm:mb-2 text-shadow-md">Welcome to</span>
-              <span className="block font-display text-white text-shadow-md">DCMUN!</span>
+
+
+
+            <span className="block font-display text-white mb-1 sm:mb-2 text-shadow-md">Welcome to</span>
+            <span className="block font-display text-white text-shadow-md">DCMUN!</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-3xl mx-auto my-6 sm:my-12 text-shadow-sm">
@@ -105,6 +111,7 @@ const Hero = () => {
             </Button>
           </div>
       
+          
           <div className="mt-12 sm:mt-16 flex justify-center">
             <div
               className="animate-bounce cursor-pointer"
