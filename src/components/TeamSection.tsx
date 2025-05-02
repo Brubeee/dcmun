@@ -15,16 +15,17 @@ interface TeamMemberProps {
   position: string;
   onClick?: () => void;
   isClickable: boolean;
+  isLeadership?: boolean;
 }
 
-const TeamMember = ({ name, position, onClick, isClickable }: TeamMemberProps) => {
+const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: TeamMemberProps) => {
   return (
     <Card 
-      className={`bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 ${isClickable ? 'cursor-pointer' : ''}`}
+      className={`bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 ${isClickable ? 'cursor-pointer' : ''} ${isLeadership ? 'h-full' : ''}`}
       onClick={isClickable ? onClick : undefined}
     >
-      <CardContent className="p-4">
-        <h3 className="text-lg font-medium text-white mb-1">{name}</h3>
+      <CardContent className={`p-4 ${isLeadership ? 'py-6' : ''}`}>
+        <h3 className={`font-medium text-white mb-1 ${isLeadership ? 'text-xl' : 'text-lg'}`}>{name}</h3>
         <p className="text-diplomacy-gold text-sm">{position}</p>
       </CardContent>
     </Card>
@@ -42,9 +43,13 @@ const TeamSection = () => {
     "Head of Delegate Affairs": ["Pahael Goyal", "Prapti"],
   };
 
-  const teamMembers = [
+  // Separate leadership (SG and DG) from other team members
+  const leadershipMembers = [
     { name: "Manan Bhambhani", position: "Secretary General" },
     { name: "Ved Shah", position: "Director General" },
+  ];
+
+  const teamMembers = [
     { name: "Devansh Mishra", position: "Head of Social Media" },
     { name: "Utkarsh Singh", position: "Head of Social Media" },
     { name: "Krittika Acharya", position: "Head of Marketing" },
@@ -75,16 +80,34 @@ const TeamSection = () => {
           </p>
         </div>
 
+        {/* Leadership row - SG and DG */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {leadershipMembers.map((member, index) => (
+            <div 
+              key={index}
+              className="transition-all duration-500 opacity-0 translate-y-4"
+              style={{ 
+                animationName: "fade-in", 
+                animationDuration: "0.5s", 
+                animationDelay: `${0.1 * index}s`, 
+                animationFillMode: "forwards" 
+              }}
+            >
+              <TeamMember 
+                name={member.name}
+                position={member.position}
+                isClickable={false}
+                isLeadership={true}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Secretariat members grid */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => {
-            // For the Secretary General (now first)
-            const isSecretaryGeneral = member.name === "Manan Bhambhani";
-            // For the Director General (now second)
-            const isDirectorGeneral = member.name === "Ved Shah";
-            
-            // Center the last item (Delegate Affairs)
+            // For the last item (Delegate Affairs)
             const isLastItem = member.name === "Jaskaran Singh Layal";
-            
             const isClickable = isClickablePosition(member.position);
             
             return (
@@ -98,7 +121,7 @@ const TeamSection = () => {
                 style={{ 
                   animationName: "fade-in", 
                   animationDuration: "0.5s", 
-                  animationDelay: `${0.1 * index}s`, 
+                  animationDelay: `${0.1 * (index + leadershipMembers.length)}s`, 
                   animationFillMode: "forwards" 
                 }}
               >
