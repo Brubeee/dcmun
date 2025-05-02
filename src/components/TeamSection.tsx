@@ -34,14 +34,12 @@ const TeamMember = ({ name, position, onClick, isClickable }: TeamMemberProps) =
 const TeamSection = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(null);
 
-  // Department data including dummy OC members
+  // Department data with OC members
   const departments = {
-    "Secretary General": ["Member 1", "Member 2", "Member 3"],
-    "Director General": ["", "Member 2", "Member 3"],
-    "Head of Social Media": ["Jaspal", "Member 2", "Member 3"],
-    "Head of Marketing": ["Jaspal", "Member 2", "Member 3"],
-    "Head of Agenda & Crisis Development": ["Member 1", "Member 2", "Member 3"],
-    "Head of Delegate Affairs": ["Member 1", "Member 2", "Member 3"],
+    "Head of Social Media": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
+    "Head of Marketing": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
+    "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
+    "Head of Delegate Affairs": ["Pahael Goyal", "Prapti"],
   };
 
   const teamMembers = [
@@ -130,21 +128,11 @@ const TeamSection = () => {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {(selectedDepartment === "Head of Social Media" || selectedDepartment === "Head of Marketing") ? (
-                      // Use the same members for Social Media and Marketing
-                      ["Member 1", "Member 2", "Member 3"].map((member, i) => (
-                        <TableRow key={i}>
-                          <TableCell className="text-gray-300">{member}</TableCell>
-                        </TableRow>
-                      ))
-                    ) : (
-                      // Use department-specific members for other departments
-                      departments[selectedDepartment as keyof typeof departments].map((member, i) => (
-                        <TableRow key={i}>
-                          <TableCell className="text-gray-300">{member}</TableCell>
-                        </TableRow>
-                      ))
-                    )}
+                    {departments[selectedDepartment as keyof typeof departments].map((member, i) => (
+                      <TableRow key={i}>
+                        <TableCell className="text-gray-300">{member}</TableCell>
+                      </TableRow>
+                    ))}
                   </TableBody>
                 </Table>
               </CardContent>
