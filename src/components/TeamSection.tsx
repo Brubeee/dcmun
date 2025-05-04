@@ -37,7 +37,7 @@ const TeamSection = () => {
 
   // Department data with OC members
   const departments = {
-    "Head of Social Media": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
+    "Head of Media Production": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
     "Head of Marketing": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
     "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
     "Head of Delegate Affairs": ["Pahael Goyal", "Prapti"],
@@ -50,9 +50,9 @@ const TeamSection = () => {
   ];
 
   const teamMembers = [
-    { name: "Devansh Mishra", position: "Head of Social Media" },
-    { name: "Utkarsh Singh", position: "Head of Social Media" },
-    { name: "Krittika Acharya", position: "Head of Marketing" },
+    { name: "Devansh Mishra", position: "Head of Marketing" },
+    { name: "Utkarsh Singh", position: "Head of Marketing" },
+    { name: "Krittika Acharya", position: "Head of Media Production" },
     { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
     { name: "Jaskaran Singh Layal", position: "Head of Delegate Affairs" },
   ];
