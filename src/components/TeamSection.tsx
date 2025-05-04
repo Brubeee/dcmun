@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -24,7 +23,7 @@ const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: Team
       className={`bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 ${isClickable ? 'cursor-pointer' : ''} ${isLeadership ? 'h-full' : ''}`}
       onClick={isClickable ? onClick : undefined}
     >
-      <CardContent className={`p-4 ${isLeadership ? 'py-6' : ''}`}>
+      <CardContent className={`p-4 ${isLeadership ? 'py-6' : ''} text-center`}>
         <h3 className={`font-medium text-white mb-1 ${isLeadership ? 'text-xl' : 'text-lg'}`}>{name}</h3>
         <p className="text-diplomacy-gold text-sm">{position}</p>
       </CardContent>
@@ -52,9 +51,9 @@ const TeamSection = () => {
   const teamMembers = [
     { name: "Devansh Mishra", position: "Head of Marketing" },
     { name: "Utkarsh Singh", position: "Head of Marketing" },
-    { name: "Krittika Acharya", position: "Head of Media Production" },
     { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
     { name: "Jaskaran Singh Layal", position: "Head of Delegate Affairs" },
+    { name: "Krittika Acharya", position: "Head of Media Production" },
   ];
 
   const handleMemberClick = (position: string) => {
@@ -106,18 +105,12 @@ const TeamSection = () => {
         {/* Secretariat members grid */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {teamMembers.map((member, index) => {
-            // For the last item (Delegate Affairs)
-            const isLastItem = member.name === "Jaskaran Singh Layal";
             const isClickable = isClickablePosition(member.position);
             
             return (
               <div 
                 key={index} 
-                className={`${
-                  isLastItem 
-                    ? "col-span-1 sm:col-span-2 md:col-span-1 md:col-start-2" 
-                    : ""
-                } transition-all duration-500 opacity-0 translate-y-4`}
+                className="transition-all duration-500 opacity-0 translate-y-4"
                 style={{ 
                   animationName: "fade-in", 
                   animationDuration: "0.5s", 
@@ -141,19 +134,19 @@ const TeamSection = () => {
           <div className="mt-12 max-w-2xl mx-auto animate-fade-in">
             <Card className="bg-diplomacy-navy/50 border-diplomacy-purple/20 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h3 className="text-xl font-medium text-diplomacy-gold mb-4">
+                <h3 className="text-xl font-medium text-diplomacy-gold mb-4 text-center">
                   {selectedDepartment} Team
                 </h3>
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="text-white">OC Member</TableHead>
+                      <TableHead className="text-white text-center">OC Member</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {departments[selectedDepartment as keyof typeof departments].map((member, i) => (
                       <TableRow key={i}>
-                        <TableCell className="text-gray-300">{member}</TableCell>
+                        <TableCell className="text-gray-300 text-center">{member}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
