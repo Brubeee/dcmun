@@ -37,8 +37,8 @@ const TeamSection = () => {
 
   // Department data with OC members - Updated Delegate Affairs and fixed spelling of Diyansh
   const departments = {
-    "Head of Media Production": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
-    "Head of Marketing": ["Diyansh", "Divyansh Sanghal"],
+    "Head of Media Production": ["Jaspal", "Divyansh Sanghal"],
+    "Head of Marketing": ["Jaspal", "Diyansh Sanghal"],
     "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
     "Head of Delegate Affairs": ["Suhana", "Samiksha hadia"],
   };
