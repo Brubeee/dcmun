@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto text-center space-y-6 md:space-y-12 px-4">
         <div className={`transition-all duration-1000 transform ${contentLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <img
-              src="/logo (5).png"
+              src="/logo (6).png"
               alt="DCMUN Logo"
               className="mx-auto h-80 sm:h-120 w-auto mb-2 sm:mb-4"
           />
