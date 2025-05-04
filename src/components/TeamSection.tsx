@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -34,12 +35,12 @@ const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: Team
 const TeamSection = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(null);
 
-  // Department data with OC members
+  // Department data with OC members - Updated Delegate Affairs and fixed spelling of Diyansh
   const departments = {
     "Head of Media Production": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
-    "Head of Marketing": ["Jaspal (KSN Breads)", "Divyansh Sanghal"],
+    "Head of Marketing": ["Diyansh", "Divyansh Sanghal"],
     "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
-    "Head of Delegate Affairs": ["Pahael Goyal", "Prapti"],
+    "Head of Delegate Affairs": ["Suhana", "Samiksha hadia"],
   };
 
   // Separate leadership (SG and DG) from other team members
