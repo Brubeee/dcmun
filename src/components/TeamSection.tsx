@@ -51,8 +51,8 @@ const TeamSection = () => {
   const teamMembers = [
     { name: "Devansh Mishra", position: "Head of Marketing" },
     { name: "Utkarsh Singh", position: "Head of Marketing" },
-    { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
     { name: "Jaskaran Singh Layal", position: "Head of Delegate Affairs" },
+    { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
     { name: "Krittika Acharya", position: "Head of Media Production" },
   ];
 
