@@ -40,7 +40,7 @@ const TeamSection = () => {
     "Head of Media Production": ["Jaspal", "Divyansh Sanghal"],
     "Head of Marketing": ["Jaspal", "Diyansh Sanghal"],
     "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
-    "Head of Delegate Affairs": ["Suhana", "Samiksha hadia"],
+    "Head of Delegate Affairs": ["Suhana", "Samiksha hadia", "Prapti Shetty", "Pahel Goyal"],
   };
 
   // Separate leadership (SG and DG) from other team members
