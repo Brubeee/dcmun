@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -92,7 +93,7 @@ const Hero = () => {
               className="w-full sm:w-auto"
             >
               <Button className="bg-amber-600 hover:bg-amber-500 text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 w-full sm:w-auto">
-                OC Applications- Apply Now
+                Registrations Open
               </Button>
             </a>
             <Button
