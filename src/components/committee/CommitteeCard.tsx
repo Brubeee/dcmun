@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Committee } from "@/data/committeeData";
-import { BookText, Globe } from "lucide-react";
+import { BookText, Globe, Gavel, Atom, Cross, People } from "lucide-react";
 
 interface CommitteeCardProps {
   committee: Committee;
@@ -10,12 +10,22 @@ interface CommitteeCardProps {
 const CommitteeCard = ({ committee }: CommitteeCardProps) => {
   // Render the appropriate icon based on the iconType
   const renderIcon = () => {
-    if (committee.iconType === "bookText") {
-      return <BookText className="text-diplomacy-gold" />;
-    } else if (committee.iconType === "globe") {
-      return <Globe className="text-diplomacy-gold" />;
+    switch (committee.iconType) {
+      case "bookText":
+        return <BookText className="text-diplomacy-gold" />;
+      case "globe":
+        return <Globe className="text-diplomacy-gold" />;
+      case "gavel":
+        return <Gavel className="text-diplomacy-gold" />;
+      case "atom":
+        return <Atom className="text-diplomacy-gold" />;
+      case "cross":
+        return <Cross className="text-diplomacy-gold" />;
+      case "people":
+        return <People className="text-diplomacy-gold" />;
+      default:
+        return null;
     }
-    return null;
   };
 
   return (
