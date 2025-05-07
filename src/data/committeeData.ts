@@ -1,6 +1,6 @@
 
 import { LucideIcon } from "lucide-react";
-import { BookText, Globe, Gavel, Atom, Cross, People } from "lucide-react";
+import { BookText, Globe, Gavel, Atom, Cross, Users } from "lucide-react";
 
 export interface Committee {
   name: string;

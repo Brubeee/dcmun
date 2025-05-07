@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Committee } from "@/data/committeeData";
-import { BookText, Globe, Gavel, Atom, Cross, People } from "lucide-react";
+import { BookText, Globe, Gavel, Atom, Cross, Users } from "lucide-react";
 
 interface CommitteeCardProps {
   committee: Committee;
@@ -22,7 +22,7 @@ const CommitteeCard = ({ committee }: CommitteeCardProps) => {
       case "cross":
         return <Cross className="text-diplomacy-gold" />;
       case "people":
-        return <People className="text-diplomacy-gold" />;
+        return <Users className="text-diplomacy-gold" />;
       default:
         return null;
     }
