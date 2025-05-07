@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BookText, Globe, Magic } from "lucide-react";
 
 const Committees = () => {
   const [activeTab, setActiveTab] = useState("all");
@@ -43,25 +44,30 @@ const Committees = () => {
       image: "bg-gradient-to-br from-blue-900/70 to-blue-700/40",
     },
     {
-      name: "Interplanetary Resource Council",
-      era: "Future",
-      period: "2080",
-      description: "Establish frameworks for the ethical extraction and distribution of resources from Mars, asteroids, and beyond.",
+      name: "The Wizarding Council of Great Britain",
+      era: "Fiction",
+      period: "Post-Second Wizarding War",
+      description: "Magic, Power, and Policy in the Post-War World",
+      agendas: [
+        "Reforming the Ministry of Magic after the Second Wizarding War",
+        "Legalizing Magical Creatures' Rights and Representation",
+        "Regulating the Use of Unforgivable Curses by Law Enforcement"
+      ],
       image: "bg-gradient-to-br from-purple-900/70 to-purple-700/40",
+      icon: <Magic className="text-diplomacy-gold" />
     },
     {
-      name: "Post-Nuclear Reconstruction Forum",
-      era: "Future",
-      period: "2060",
-      description: "Rebuild global governance and address humanitarian crises in the aftermath of limited nuclear exchanges.",
+      name: "The Global Abortion Summit",
+      era: "Present",
+      period: "Present Day",
+      description: "Choice. Control. Controversy.",
+      agendas: [
+        "Global Recognition of Reproductive Rights as Basic Human Rights",
+        "Balancing Religious, Cultural, and Legal Norms in Abortion Policy",
+        "Decriminalization and Safe Access in Developing Nations"
+      ],
       image: "bg-gradient-to-br from-green-900/70 to-green-700/40",
-    },
-    {
-      name: "Arctic Sovereignty Commission",
-      era: "Future",
-      period: "2070",
-      description: "Resolve competing claims over newly accessible Arctic territories and resources in a warming world.",
-      image: "bg-gradient-to-br from-cyan-900/70 to-cyan-700/40",
+      icon: <Globe className="text-diplomacy-gold" />
     },
   ];
 
@@ -128,11 +134,11 @@ const Committees = () => {
                 Present
               </TabsTrigger>
               <TabsTrigger
-                value="future"
+                value="fiction"
                 className="text-white data-[state=active]:bg-diplomacy-purple"
-                onClick={() => setActiveTab("future")}
+                onClick={() => setActiveTab("fiction")}
               >
-                Future
+                Fiction
               </TabsTrigger>
             </TabsList>
           </div>
@@ -147,7 +153,8 @@ const Committees = () => {
                   <div className="absolute inset-0 backdrop-blur-sm bg-diplomacy-navy/30 z-0"></div>
                   <div className="relative z-10">
                     <CardHeader>
-                      <div className="inline-block px-2 py-1 bg-diplomacy-purple/70 text-xs rounded mb-2">
+                      <div className="inline-block px-2 py-1 bg-diplomacy-purple/70 text-xs rounded mb-2 flex items-center gap-1">
+                        {committee.icon && committee.icon}
                         {committee.era}
                       </div>
                       <CardTitle className="text-xl font-display text-white">
@@ -158,7 +165,17 @@ const Committees = () => {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-300">{committee.description}</p>
+                      <p className="text-gray-300 mb-2">{committee.description}</p>
+                      {committee.agendas && (
+                        <div className="mt-3">
+                          <h4 className="text-diplomacy-gold text-sm mb-2">Agendas:</h4>
+                          <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
+                            {committee.agendas.map((agenda, i) => (
+                              <li key={i} className="pl-1">{agenda}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </CardContent>
                   </div>
                 </Card>
@@ -166,7 +183,7 @@ const Committees = () => {
             </div>
           </TabsContent>
           
-          {["mythology", "ancient", "historical", "modern", "present", "future"].map((era) => (
+          {["mythology", "ancient", "historical", "modern", "present", "fiction"].map((era) => (
             <TabsContent key={era} value={era} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {filteredCommittees.map((committee, index) => (
@@ -177,7 +194,8 @@ const Committees = () => {
                     <div className="absolute inset-0 backdrop-blur-sm bg-diplomacy-navy/30 z-0"></div>
                     <div className="relative z-10">
                       <CardHeader>
-                        <div className="inline-block px-2 py-1 bg-diplomacy-purple/70 text-xs rounded mb-2">
+                        <div className="inline-block px-2 py-1 bg-diplomacy-purple/70 text-xs rounded mb-2 flex items-center gap-1">
+                          {committee.icon && committee.icon}
                           {committee.era}
                         </div>
                         <CardTitle className="text-xl font-display text-white">
@@ -188,7 +206,17 @@ const Committees = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-300">{committee.description}</p>
+                        <p className="text-gray-300 mb-2">{committee.description}</p>
+                        {committee.agendas && (
+                          <div className="mt-3">
+                            <h4 className="text-diplomacy-gold text-sm mb-2">Agendas:</h4>
+                            <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
+                              {committee.agendas.map((agenda, i) => (
+                                <li key={i} className="pl-1">{agenda}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </CardContent>
                     </div>
                   </Card>

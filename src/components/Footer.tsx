@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSczMZFNTdVQ41kAAZ6x_xa9xBiIz_2kHMFeO-zrtC7X8tkSxw/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
               <Button className="bg-diplomacy-purple hover:bg-diplomacy-lightPurple text-white">
-                OC Applications
+                Registrations Open
               </Button>
             </a>
           </div>

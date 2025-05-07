@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -35,9 +34,9 @@ const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: Team
 const TeamSection = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string | null>(null);
 
-  // Department data with OC members - Updated Delegate Affairs and fixed spelling of Diyansh
+  // Department data with OC members
   const departments = {
-    "Head of Media Production": ["Jaspal", "Divyansh Sanghal"],
+    "Head of Media Production": ["Jaspal", "Diyansh Sanghal"],
     "Head of Marketing": ["Jaspal", "Diyansh Sanghal"],
     "Head of Agenda & Crisis Development": ["Madhav", "Rishika Reddy"],
     "Head of Delegate Affairs": ["Suhana", "Samiksha hadia", "Prapti Shetty", "Pahael Goyal"],
@@ -49,10 +48,11 @@ const TeamSection = () => {
     { name: "Ved Shah", position: "Director General" },
   ];
 
+  // Reorder team members to put Jaskaran second and Krittika last
   const teamMembers = [
     { name: "Devansh Mishra", position: "Head of Marketing" },
-    { name: "Utkarsh Singh", position: "Head of Marketing" },
     { name: "Jaskaran Singh Layal", position: "Head of Delegate Affairs" },
+    { name: "Utkarsh Singh", position: "Head of Marketing" },
     { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
     { name: "Krittika Acharya", position: "Head of Media Production" },
   ];
