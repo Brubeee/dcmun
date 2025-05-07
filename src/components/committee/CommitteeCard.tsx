@@ -1,12 +1,23 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Committee } from "@/data/committeeData";
+import { BookText, Globe } from "lucide-react";
 
 interface CommitteeCardProps {
   committee: Committee;
 }
 
 const CommitteeCard = ({ committee }: CommitteeCardProps) => {
+  // Render the appropriate icon based on the iconType
+  const renderIcon = () => {
+    if (committee.iconType === "bookText") {
+      return <BookText className="text-diplomacy-gold" />;
+    } else if (committee.iconType === "globe") {
+      return <Globe className="text-diplomacy-gold" />;
+    }
+    return null;
+  };
+
   return (
     <Card
       className={`${committee.image} border border-white/10 hover:border-diplomacy-gold/50 transition-all duration-300 overflow-hidden h-full`}
@@ -15,7 +26,7 @@ const CommitteeCard = ({ committee }: CommitteeCardProps) => {
       <div className="relative z-10">
         <CardHeader>
           <div className="inline-block px-2 py-1 bg-diplomacy-purple/70 text-xs rounded mb-2 flex items-center gap-1">
-            {committee.icon && committee.icon}
+            {committee.iconType && renderIcon()}
             {committee.era}
           </div>
           <CardTitle className="text-xl font-display text-white">

@@ -1,5 +1,6 @@
 
-import { Book, Globe, BookText } from "lucide-react";
+import { LucideIcon } from "lucide-react";
+import { BookText, Globe } from "lucide-react";
 
 export interface Committee {
   name: string;
@@ -7,7 +8,7 @@ export interface Committee {
   period: string;
   description: string;
   image: string;
-  icon?: JSX.Element;
+  iconType?: "bookText" | "globe";
   agendas?: string[];
 }
 
@@ -23,7 +24,7 @@ export const committees: Committee[] = [
       "Regulating the Use of Unforgivable Curses by Law Enforcement"
     ],
     image: "bg-gradient-to-br from-purple-900/70 to-purple-700/40",
-    icon: <BookText className="text-diplomacy-gold" />
+    iconType: "bookText"
   },
   {
     name: "The Global Abortion Summit",
@@ -36,6 +37,6 @@ export const committees: Committee[] = [
       "Decriminalization and Safe Access in Developing Nations"
     ],
     image: "bg-gradient-to-br from-green-900/70 to-green-700/40",
-    icon: <Globe className="text-diplomacy-gold" />
+    iconType: "globe"
   },
 ];
