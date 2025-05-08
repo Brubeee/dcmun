@@ -81,7 +81,7 @@ export const committees: Committee[] = [
   {
     name: "The Harry Potter Committee",
     era: "Fiction",
-    period: "Post-Second Wizarding War",
+    period: "Post-First Wizarding War",
     description: "Integration of Muggle-borns and the Collapse of Blood Purity Politics",
     image: "bg-gradient-to-br from-purple-900/70 to-purple-600/40",
     iconType: "bookText",
