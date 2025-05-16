@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -42,10 +43,9 @@ const TeamSection = () => {
     "Head of Delegate Affairs": ["Suhana", "Samiksha hadia", "Prapti Shetty", "Pahael Goyal"],
   };
 
-  // Separate leadership (SG and DG) from other team members
+  // Leadership section - now only Secretary General
   const leadershipMembers = [
     { name: "Manan Bhambhani", position: "Secretary General" },
-    { name: "Ved Shah", position: "Director General" },
   ];
 
   // Reorder team members to put Jaskaran second and Krittika last
@@ -80,12 +80,12 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Leadership row - SG and DG */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Leadership row - Only SG now */}
+        <div className="max-w-5xl mx-auto mb-8">
           {leadershipMembers.map((member, index) => (
             <div 
               key={index}
-              className="transition-all duration-500 opacity-0 translate-y-4"
+              className="transition-all duration-500 opacity-0 translate-y-4 max-w-md mx-auto"
               style={{ 
                 animationName: "fade-in", 
                 animationDuration: "0.5s", 
