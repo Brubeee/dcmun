@@ -52,7 +52,7 @@ const TeamSection = () => {
   // Reorder team members to put Jaskaran second and Krittika last
   const teamMembers = [
     { name: "Devansh Mishra", position: "Head of Marketing" },
-    { name: "Mitra Mepani", position: "Head of Marketing" }
+    { name: "Mitra Mepani", position: "Head of Marketing" },
     { name: "Jaskaran Singh Layal", position: "Head of Delegate Affairs" },
     { name: "Utkarsh Singh", position: "Head of Marketing" },
     { name: "Aadhya Tyagi", position: "Head of Agenda & Crisis Development" },
