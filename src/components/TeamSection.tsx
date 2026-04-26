@@ -137,6 +137,7 @@ const TeamSection = () => {
                   position={member.position} 
                   onClick={() => handleMemberClick(member.position)}
                   isClickable={isClickable}
+                  ocMembers={departments[member.position as keyof typeof departments]}
                 />
               </div>
             );
