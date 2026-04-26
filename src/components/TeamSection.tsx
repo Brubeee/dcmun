@@ -16,9 +16,10 @@ interface TeamMemberProps {
   onClick?: () => void;
   isClickable: boolean;
   isLeadership?: boolean;
+  ocMembers?: string[];
 }
 
-const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: TeamMemberProps) => {
+const TeamMember = ({ name, position, onClick, isClickable, isLeadership, ocMembers }: TeamMemberProps) => {
   return (
     <Card 
       className={`bg-diplomacy-navy/30 border-diplomacy-purple/20 backdrop-blur-sm hover:shadow-md hover:shadow-diplomacy-purple/10 transition-all duration-300 ${isClickable ? 'cursor-pointer' : ''} ${isLeadership ? 'h-full' : ''}`}
@@ -27,6 +28,16 @@ const TeamMember = ({ name, position, onClick, isClickable, isLeadership }: Team
       <CardContent className={`p-4 ${isLeadership ? 'py-6' : ''} text-center`}>
         <h3 className={`font-medium text-white mb-1 ${isLeadership ? 'text-xl' : 'text-lg'}`}>{name}</h3>
         <p className="text-diplomacy-gold text-sm">{position}</p>
+        {ocMembers && ocMembers.length > 0 && (
+          <div className="mt-3 pt-3 border-t border-diplomacy-purple/20">
+            <p className="text-xs uppercase tracking-wider text-diplomacy-gold/70 mb-1">OC Members</p>
+            <ul className="text-gray-300 text-sm space-y-0.5">
+              {ocMembers.map((m, i) => (
+                <li key={i}>{m}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </CardContent>
     </Card>
   );
@@ -126,6 +137,7 @@ const TeamSection = () => {
                   position={member.position} 
                   onClick={() => handleMemberClick(member.position)}
                   isClickable={isClickable}
+                  ocMembers={departments[member.position as keyof typeof departments]}
                 />
               </div>
             );
