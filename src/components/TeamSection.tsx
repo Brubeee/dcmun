@@ -86,7 +86,7 @@ const TeamSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            Our <span className="text-diplomacy-gold">Leadership</span>
+            hello <span className="text-diplomacy-gold">lgp ppl</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Meet the brilliant minds behind Diplomatic Confrontation MUN
